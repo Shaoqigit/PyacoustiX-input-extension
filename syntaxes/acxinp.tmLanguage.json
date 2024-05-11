@@ -37,13 +37,13 @@
 				"0": { "name": "constant.numeric.acxinp" }
 			}
 		},
-        {
-            "name": "constant.language.acxinp",
-            "match": "\\b[A-Z_]+\\b",
-            "captures": {
-                "0": { "name": "constant.language.acxinp" }
-            }
-        }
+		{
+			"name": "constant.language.acxinp",
+			"match": "\\b[A-Z_0-9]+\\b",
+			"captures": {
+				"0": { "name": "constant.language.acxinp" }
+			}
+		}
 	],
 	"repository": {
 		"keywords": {
