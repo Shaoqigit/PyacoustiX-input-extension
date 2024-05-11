@@ -1,0 +1,68 @@
+
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "acxinp",
+	"foldingStartMarker": "#+\\s*BEGIN\\s*\\w+",
+	"foldingStopMarker": "#+\\s*END\\s*\\w+",
+	"patterns": [
+
+		{
+			"name": "comment.line.acxinp",
+			"match": "//.*$",
+			"captures": {
+				"0": {
+					"name": "punctuation.definition.comment.acxinp"
+				}
+			}
+		},
+		{
+			"name": "entity.name.section.acxinp",
+			"match": "#+\\s*\\w+"
+		},
+		{
+			"name": "keyword.control.acxinp",
+			"match": "\\b(RANGE|LIST|NONE|return)\\b"
+		},
+		{
+			"name": "constant.numeric.acxinp",
+			"match": "\\b\\d+(\\.\\d+)?([eE][-+]?\\d+)?\\b",
+			"captures": {
+				"0": { "name": "constant.other.acxinp" }
+			}
+		},
+		{
+			"name": "constant.numeric.acxinp",
+			"match": "\\b\\d+\\b",
+			"captures": {
+				"0": { "name": "constant.numeric.acxinp" }
+			}
+		},
+        {
+            "name": "constant.language.acxinp",
+            "match": "\\b[A-Z_]+\\b",
+            "captures": {
+                "0": { "name": "constant.language.acxinp" }
+            }
+        }
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.acxinp",
+				"match": "\\b(RANGE|LIST|NONE|return)\\b"
+			}]
+		},
+		"strings": {
+			"name": "string.quoted.double.acxinp",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.acxinp",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.axi"
+}

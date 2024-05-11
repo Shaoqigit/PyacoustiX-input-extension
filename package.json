@@ -1,0 +1,25 @@
+{
+  "name": "acxi",
+  "displayName": "acx input",
+  "description": "the input file for a python program call pyAcoustiX",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "acxinp",
+      "aliases": ["acxinp", "acxinp"],
+      "extensions": [".axi"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "acxinp",
+      "scopeName": "source.axi",
+      "path": "./syntaxes/acxinp.tmLanguage.json"
+    }]
+  }
+}
